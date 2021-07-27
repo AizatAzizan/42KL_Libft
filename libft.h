@@ -6,15 +6,13 @@
 /*   By: mazizan <mazizan@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 12:14:42 by mazizan           #+#    #+#             */
-/*   Updated: 2021/07/04 12:36:28 by mazizan          ###   ########.fr       */
+/*   Updated: 2021/07/22 22:15:28 by mazizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
-# include <string.h>
 # include <stdlib.h>
 
 int			ft_isalnum(int c);
@@ -31,7 +29,7 @@ size_t		ft_strlen(const char *s);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 char		*ft_strchr(const char *s, int c);
-char		*ft_strrchar(const char *s, int c);
+char		*ft_strrchr(const char *s, int c);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strdup(const char *s1);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
@@ -51,5 +49,6 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_put_nbr_fd(int n, int fd);
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif
